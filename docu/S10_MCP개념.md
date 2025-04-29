@@ -32,8 +32,9 @@ Anthropic에서 발표한 프로토콜로 LLM 모델이 외부 애플리케이�
 > 이렇게 제공된 SDK는 Langchain에서만 사용이 가능하다. 
 <br/>
 <br/>
-
-![Image: Agent Frameworks](../images/mcp_agent_03.png)
+<center>
+<img src="../images/mcp_agent_03.png" width="400" align="center" alt="Agent Frameworks">
+</center>
 
 <br/>
 - 이러한 Agent framework들은 Tool과 연동하기 위해서, 각자 Tool SDK를 제공한다. 
@@ -42,9 +43,9 @@ Anthropic에서 발표한 프로토콜로 LLM 모델이 외부 애플리케이�
 > 이렇게 제공된 SDK는 Langchain에서만 사용이 가능하다. 
 <br/>
 <br/>
-
-![Image: MCP](../images/mcp_agent_04.png)
-
+<center>
+<img src="../images/mcp_agent_04.png" width="400" align="center" alt="MCP Principle">
+</center>
 
 > 이 말은 Langchain, CrewAI,AutoGen과 같은 Agent Framework 제공자들이 각각의 Tool에 대한 SDK를 개별로 만들어야 한다는 이야기가 되고, 반대로 Tool 제공자 입장에서는 이 각각의 Agent Framework 제공자들과 협업을 통해서 LLM 애플리케이션과 연동되도록 해야하기 때문에, 커뮤니케이션 부하가 엄청나고, Tool의 기능이 하나가 업데이트 되면, 각 Agent Framework의 SDK로 업데이트 하도록 해야 하기 때문에, 개발 관리 입장에서 부담이 엄청나게 늘어난다. <br/><br/>
 > 이렇게 ```각각의 Agent Framework 제공자와 Tool 제공자가 각각 Integration을 하지 않도록 하기 위한 아이디어가 MCP (Model Context Protocol)```이다. <br/>
