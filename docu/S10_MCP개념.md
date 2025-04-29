@@ -64,15 +64,13 @@ Anthropic에서 발표한 프로토콜로 LLM 모델이 외부 애플리케이�
 > →	 이를 ```List tools 호출``` 이라고 한다. <br/> 
 > ▶ 이를 통해서 LLM application은 Tool이 어떤 기능을 제공할 수 있는지를 이해할 수 있다. 
  
-<center>
-<img src="../images/mcp_agent_05.png" width="400" align="center" alt="List Tool">
-</center>
+![Image: List Tool](../images/mcp_agent_05.png)
 
 > [그림] List Tool <br/>
 > ▶ 위의 그림은 LLM applicaiton 내의 agent가 list tools 요청을 Weather service에게 요청하여, Weather service tool이 무엇을 할 수 있는지를 질의하는 과정이다. <br/>
 > ▶ Weather service는 get_weather라는 tool을 제공하며, city 를 인자로 받아서, 해당 city의 날씨 정보를 리턴할 수 있다고 agent에게 알려준다. <br/>
 
-![Image: Call Tool](../images/mcp_agent_07.png)
+![Image: Call Tool](../images/mcp_agent_06.png)
 
 > [그림] Call Tool <br/>
 > ▶ 다음으로는 LLM application이 Tool이 무엇을 할 수 있는지를 알았기 때문에, 추가적인 정보가 필요하다면 LLM application내의 agent가 판단하여, 아래와 같이 특정 Tool을 호출한다. <br/>
