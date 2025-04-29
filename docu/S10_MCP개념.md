@@ -91,8 +91,8 @@ Anthropic에서 발표한 프로토콜로 LLM 모델이 외부 애플리케이�
 - Server SDK는 Kotlin, Python, Typescript등을 위한 여러가지 프레임웍들이 있고, Python의 경우에는 FastMCP라는 프레임웍이 많이 사용된다. (Python API 서버 프레임웍인 FastAPI와 구조가 유사하면 사용이 매우 쉽다). <br/><br/>
  
 - Client SDK의 경우에는 Agent Framework들이 이 MCP Client SDK를 Agent Framework SDK의 일부로 제공한다.
->> 공식 Anthropic 예제에서는 Anthropic agent framework에서 Client SDK를 제공하는데...<br/>
-처음 잘못 이해했을때 MCP Client SDK를 사용하기 위해서는 반드시 Anthropic agent를 사용하는 것으로 잘못 이해했는데, 그것은 예제일 뿐이고, Langchain이나 다른 agent framework의 SDK를 사용할 수 있다. <br/>
+> ▶ 공식 Anthropic 예제에서는 Anthropic agent framework에서 Client SDK를 제공하는데...<br/>
+> ▶ 처음 잘못 이해했을때 MCP Client SDK를 사용하기 위해서는 반드시 Anthropic agent를 사용하는 것으로 잘못 이해했는데, 그것은 예제일 뿐이고, Langchain이나 다른 agent framework의 SDK를 사용할 수 있다. <br/>
 <br/> 
 - Anthropic의 agent framework은 anthropic 모델만 사용할 수 있지만, 
 - Langchain 과 같은 오픈 소스 Agent framework의 경우에는 Anthropic 모델뿐만 아니라, ChatGpt나 구글의 Gemini 등의 다른 모델을 agent로 사용할 수 있고, 
