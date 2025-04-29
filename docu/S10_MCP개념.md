@@ -8,9 +8,9 @@ Anthropic에서 발표한 프로토콜로 LLM 모델이 외부 애플리케이�
 ### Agent 개념의 이해
 
 ![이미지](../images/mcp_agent_01.png)
-
-<img src="../images/mcp_agent_01.png" width="300" align="center">
-
+<center>
+<img src="../images/mcp_agent_01.png" width="200" align="center">
+</center>
 LLM (Large Language Model)은 기본적으로 학습 당시에 습득된 지식을 통해서, 질문에 대해서 답변을 한다. 즉 학습되지 않은 정보에 대해서는 답변을 할 수 없고, 질문에 대한 답변 이외에 음악을 튼다가나, 컴퓨터내에서 파일을 검색한다던가의 추가적인 행동을 할 수 없다. 
  
 이러한 LLM의 한계를 극복하고, LLM 애플리케이션의 기능을 확장하기 위해서 우리는 LLM이 다른 애플리케이션이나 데이터 소스와 상호 작용을 하도록 할 수 있다. 
