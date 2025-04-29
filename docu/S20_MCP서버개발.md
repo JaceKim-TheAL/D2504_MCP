@@ -21,11 +21,24 @@ MCP 서버 애플리케이션이 악의적으로 로컬 파일을 전송하거�
 그래서 로컬 MCP 서버를 다운로드 받아서 사용할 경우에는, 반드시 인증이 되고 증명이 된 서버만 사용하기 바란다.) <br/>
 > ▶ 로컬 MCP 서버의 경우에는 stdio input을 사용한다. <br/> 
 Linux 파이프 (|)와 같이 콘솔 input/output을 이용하여 input/ouput을 받는다는 이야기이다. <br/>
-리모트 MCP 서버의 경우에는 HTTP/JSON-RPC를 이용해서, 통신한다. <br/>
+리모트 MCP 서버의 경우에는 HTTP/JSON-RPC를 이용해서 통신한다. <br/>
 <br/>
 <br/>
  
 ## MCP Server 구현
+- MCP Server를 구현하려면 SDK를 사용해야 하는데, 현재는 Python, Typescript , Java, Kotlin, C#을 지원한다.
+- 이 예제에서는 Python을 이용해보도록 하겠다. <br/>
+파이썬 SDK https://github.com/modelcontextprotocol/python-sdk <br/>
+- 파이썬 SDK는 FastMCP라는 MCP로, 파이썬의 FastAPI와 유사하고 사용법이 단순하다.<br/>
+<br/>
+ 
+### 1. 파이썬 환경 설정
+- uv init 로, 기본 프로젝트 폴더를 생성한다.
+- uv venv로, 파이썬 가상 환경을 설정한다. 
+- uv add를 이용하여 mcp 파이썬 라이브러리를 설치한다. 
+
+
+
 
 
 
