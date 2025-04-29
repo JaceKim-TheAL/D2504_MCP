@@ -16,8 +16,9 @@ Anthropic에서 발표한 프로토콜로 LLM 모델이 외부 애플리케이�
 > 즉, 학습되지 않은 정보에 대해서는 답변을 할 수 없고, 질문에 대한 답변 이외에 음악을 튼다가나, 컴퓨터내에서 파일을 검색한다던가의 추가적인 행동을 할 수 없다. <br/>
 
 ### # LLM 애플리케이션의 기능확장
-
-![Image: Agent using Tool](../images/mcp_agent_02.png)
+<center>
+<img src="../images/mcp_agent_02.png" width="400" align="center" alt="Agent using Tool">
+</center>
 
 - Agent를 통한 다른 애플리케이션과 상호작용
 > Eg. Yahoo Finance 웹사이트를 통해서 주가 정보를 얻어오도록 할 수 있다. <br/>
