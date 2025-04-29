@@ -1,3 +1,7 @@
+<p style="text-align: right"> 
+    <a href="./README.md">[INDEX]</a>
+</p>
+
 # ■ MCP(Model Context Protocol)1. 개념이해
 
 Anthropic에서 발표한 프로토콜로 LLM 모델이 외부 애플리케이션과 연동할 수 있도록 해주는 스펙
