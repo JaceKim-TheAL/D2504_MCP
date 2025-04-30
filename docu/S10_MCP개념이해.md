@@ -62,15 +62,18 @@ Anthropic에서 발표한 프로토콜로 LLM 모델이 외부 애플리케이�
 > -  Agent Framework 제공자와 Tool 제공자가 서로 SDK 스펙을 맞출 필요없이 업계의 표준화된 프로토콜을 이용하여, 개발을 하게 되면, 
 > - 어느 Agent Framework이던지, 어떤 Tool과도 연동될 수 있도록 할 수 있다. 이렇게 함으로써 Agent Framework 제공자는 개별로 Tool과 연동이 필요없이 
 > - MCP 표준에 맞춰서 Tool을 연동하던가, 이미 개발된 Tool들을 연동할 수 있기 때문에, Tool 제공자와 Integration을 위한 별도의 작업이 없어진다. 
-<br/>
+
 <br/>
 <center>
 <img src="../images/mcp_agent_06.png" width="300" align="center" alt="MCP Protocol">
 </center>
+
 - MCP는 코드나 SDK가 아니고, 정확하게는 프로토콜임
 > - JSON RPC를 사용함<br/>
 > - TCP, HTTP 등 여러가지 프로토콜을 사용할 수 있지만, MCP에서는 SSE라는 이름으로 JSON/HTTP를 사용함<br/>
 >   (REST와는 다름, Client가 Server에게 Notification을 줄 수 있음음)
+<br/>
+<br/>
 
 ## MCP 프로토콜의 동작 원리
 - CP에 대해서 정확하게 이해하려면, MCP는 정확하게 이야기 하면 Protocol이다. 
