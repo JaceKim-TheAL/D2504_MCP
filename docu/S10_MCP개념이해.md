@@ -68,7 +68,7 @@ Anthropic에서 발표한 프로토콜로 LLM 모델이 외부 애플리케이�
 <img src="../images/mcp_agent_06.png" width="300" align="center" alt="MCP Protocol">
 </center>
 
-- MCP는 코드나 SDK가 아니고, 정확하게는 프로토콜임
+> MCP는 코드나 SDK가 아니고, 정확하게는 프로토콜임
 > - JSON RPC를 사용함<br/>
 > - TCP, HTTP 등 여러가지 프로토콜을 사용할 수 있지만, MCP에서는 SSE라는 이름으로 JSON/HTTP를 사용함<br/>
 >   (REST와는 다름, Client가 Server에게 Notification을 줄 수 있음음)
