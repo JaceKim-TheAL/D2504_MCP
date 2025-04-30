@@ -40,7 +40,54 @@ Linux 파이프 (|)와 같이 콘솔 input/output을 이용하여 input/ouput을
 
 
 
+### MCP 서버 설정
 
+MCP 서버를 모아놓은 대표적인 디렉토리 사이트들
+- https://mcp.so
+- https://glama.ai/mcp/servers
+- https://smithery.ai/
+- https://mcpservers.org/
 
+ 
+### MCP 서버 확인
+
+- 만약 클로드등의 클라이언트 없이 MCP 서버가 제대로 작동하는지 확인하고 싶으면, MCP Inspector라는 것을 사용할 수 있다. 
+https://modelcontextprotocol.io/docs/tools/inspector
+ 
+- npx 명령을 이용해서 구동할 수 있는데,
+npx @modelcontextprotocol/inspector {mcp 서버 구동 명령어}
+식으로 사용하면 된다. 우리가 개발한 서버는 main.py 이기 때문에, 아래 명령어로 구동한다. 
+ 
+- npx @modelcontextprotocol/inspector uv run main.py
+서버가 구동이 되면 아래와 같이 localhost에서 접속할 수 있는 URL http://127.0.0.1:6274 가 출력된다. 
+
+<center>
+<img src="../images/mcp_server_chk_01.png" alt="MCP서버확인1" width="500">
+</center>
+
+해당 사이트에 접속하면 아래와 같이 MCP server를 접속할 수 있는 Connect 버튼이 나온다. 
+
+<center>
+<img src="../images/mcp_server_chk_02.png" alt="MCP서버확인2" width="200">
+</center>
+
+서버에 Connect를 하면 해당 MCP Server가 제공하는 Tool list나 기타 resource, prompt에 대한 정보를 볼 수 있다. (이 글에서는 resource나 prompt는 다루지 않았다. )
+
+<center>
+<img src="../images/mcp_server_chk_03.png" alt="MCP서버확인3" width="500">
+</center>
+
+Tools를 선택하여, list tools를 해보면 우리가 구현한 get_weather tool이 나오는 것을 확인할 수 있고, 이를 테스트하기 위해서, 툴을 선택하면 우측에 입력값을 넣을 수 있는 창이 나온다. 아래와 같이 “Mountain view”를 입력하면, 결과 값으로 “Mountain view weather is good”이라는 응답이 나오는 것을 확인할 수 있다. 
+
+<center>
+<img src="../images/mcp_server_chk_04.png" alt="MCP서버확인4" width="500">
+</center>
+ 
+이 글에서는 간단하게 mcp server를 fastmcp sdk로 구현하는 방법에 대해서 알아보았다. 다음글에서는 mcp client를 직접 구현하는 방법에 대해서 알아보도록 하겠다.
+
+[mcp_server_chk_01]: ../images/mcp_server_chk_01.png
+[mcp_server_chk_02]: ../images/mcp_server_chk_02.png
+[mcp_server_chk_03]: ../images/mcp_server_chk_03.png
+[mcp_server_chk_04]: ../images/mcp_server_chk_04.png
 
 
