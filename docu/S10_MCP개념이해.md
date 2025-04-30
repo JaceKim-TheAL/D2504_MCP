@@ -52,12 +52,25 @@ Anthropic에서 발표한 프로토콜로 LLM 모델이 외부 애플리케이�
 </center>
 
 > 이 말은 Langchain, CrewAI,AutoGen과 같은 Agent Framework 제공자들이 각각의 Tool에 대한 SDK를 개별로 만들어야 한다는 이야기가 되고, 반대로 Tool 제공자 입장에서는 이 각각의 Agent Framework 제공자들과 협업을 통해서 LLM 애플리케이션과 연동되도록 해야하기 때문에, 커뮤니케이션 부하가 엄청나고, Tool의 기능이 하나가 업데이트 되면, 각 Agent Framework의 SDK로 업데이트 하도록 해야 하기 때문에, 개발 관리 입장에서 부담이 엄청나게 늘어난다. <br/><br/>
+<br/>
+<br/>
+<center>
+<img src="../images/mcp_agent_05.png" width="400" align="center" alt="MCP Principle">
+</center>
+
 > 이렇게 ```각각의 Agent Framework 제공자와 Tool 제공자가 각각 Integration을 하지 않도록 하기 위한 아이디어가 MCP (Model Context Protocol)```이다. <br/>
->> -  Agent Framework 제공자와 Tool 제공자가 서로 SDK 스펙을 맞출 필요없이 업계의 표준화된 프로토콜을 이용하여, 개발을 하게 되면, 
->> - 어느 Agent Framework이던지, 어떤 Tool과도 연동될 수 있도록 할 수 있다. 이렇게 함으로써 Agent Framework 제공자는 개별로 Tool과 연동이 필요없이 
->> - MCP 표준에 맞춰서 Tool을 연동하던가, 이미 개발된 Tool들을 연동할 수 있기 때문에, Tool 제공자와 Integration을 위한 별도의 작업이 없어진다. 
+> -  Agent Framework 제공자와 Tool 제공자가 서로 SDK 스펙을 맞출 필요없이 업계의 표준화된 프로토콜을 이용하여, 개발을 하게 되면, 
+> - 어느 Agent Framework이던지, 어떤 Tool과도 연동될 수 있도록 할 수 있다. 이렇게 함으로써 Agent Framework 제공자는 개별로 Tool과 연동이 필요없이 
+> - MCP 표준에 맞춰서 Tool을 연동하던가, 이미 개발된 Tool들을 연동할 수 있기 때문에, Tool 제공자와 Integration을 위한 별도의 작업이 없어진다. 
 <br/>
 <br/>
+<center>
+<img src="../images/mcp_agent_06.png" width="300" align="center" alt="MCP Protocol">
+</center>
+- MCP는 코드나 SDK가 아니고, 정확하게는 프로토콜임
+> - JSON RPC를 사용함<br/>
+> - TCP, HTTP 등 여러가지 프로토콜을 사용할 수 있지만, MCP에서는 SSE라는 이름으로 JSON/HTTP를 사용함<br/>
+>   (REST와는 다름, Client가 Server에게 Notification을 줄 수 있음음)
 
 ## MCP 프로토콜의 동작 원리
 - CP에 대해서 정확하게 이해하려면, MCP는 정확하게 이야기 하면 Protocol이다. 
@@ -71,7 +84,7 @@ Anthropic에서 발표한 프로토콜로 LLM 모델이 외부 애플리케이�
 <br/>
 <br/>
 
-![Image: List Tool](../images/mcp_agent_05.png)
+![Image: List Tool](../images/mcp_agent_07.png)
 
 > [그림] List Tool <br/>
 > ▶ 위의 그림은 LLM applicaiton 내의 agent가 list tools 요청을 Weather service에게 요청하여, Weather service tool이 무엇을 할 수 있는지를 질의하는 과정이다. <br/>
@@ -79,7 +92,7 @@ Anthropic에서 발표한 프로토콜로 LLM 모델이 외부 애플리케이�
 <br/>
 <br/>
 
-![Image: Call Tool](../images/mcp_agent_06.png)
+![Image: Call Tool](../images/mcp_agent_08.png)
 
 > [그림] Call Tool <br/>
 > ▶ 다음으로는 LLM application이 Tool이 무엇을 할 수 있는지를 알았기 때문에, 추가적인 정보가 필요하다면 LLM application내의 agent가 판단하여, 아래와 같이 특정 Tool을 호출한다. <br/>
@@ -89,7 +102,7 @@ Anthropic에서 발표한 프로토콜로 LLM 모델이 외부 애플리케이�
 
 ## MCP SDK
 
-![Images](../images/mcp_agent_07.png)
+![Images](../images/mcp_agent_09.png)
 
 - 이런 개발을 손쉽게 하기 위해서, Server와 Client의 SDK를 제공한다. <br/>
 - Server SDK는 Kotlin, Python, Typescript등을 위한 여러가지 프레임웍들이 있고, Python의 경우에는 FastMCP라는 프레임웍이 많이 사용된다. (Python API 서버 프레임웍인 FastAPI와 구조가 유사하면 사용이 매우 쉽다). <br/><br/>
