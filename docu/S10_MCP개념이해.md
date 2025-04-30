@@ -119,12 +119,14 @@ Anthropic에서 발표한 프로토콜로 LLM 모델이 외부 애플리케이�
 - Langchain의 경우 agent 기능뿐만 아니라 llm application을 개발할 수 있는 폭넓은 기능을 제공하고 있고, 개인적으로는 anthropic agent framework 보다 코딩이 더 쉽다고 생각한다. 
 <br/>
 <br/>
+
 ![Images](../images/mcp_agent_10.png)
 > - Host : MCP를 이용한 `LLM 애플리케이션` (채팅, Cursor AI 등)
 > - Client : 별도의 독립된 Process가 아님. `Host에서 MCP Server를 호출하는 코드` (like JDBC드라이버)
 > - Server : JSON/HTTP 서버로 MCP 요청을 받아서 Tool(Service)에 전달하는 `일종의 API Server` 
 <br/>
 <br/>
+
 ![Images](../images/mcp_agent_11.png)
 > - MCP Client SDK : Agent Framework이 MCP Server를 쉽게 호출할 수 있는 SDK를 제공함 <br/>
 >  cf. 보통 Agent Framework에 포함되어 있음
